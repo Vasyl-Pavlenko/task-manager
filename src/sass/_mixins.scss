@@ -1,0 +1,25 @@
+// Миксин для мобильных устройств (ширина экрана 480px и выше)
+@mixin mobile {
+  @media screen and (min-width: 480px) {
+    @content;
+  }
+}
+
+// Миксин для планшетов (ширина экрана 1024 и выше)
+@mixin tablet {
+  @media screen and (min-width: 1024px) {
+    @content;
+  }
+}
+
+// Миксин для настольных компьютеров (ширина экрана 1660px и выше)
+@mixin desktop {
+  @media screen and (min-width: 1660) {
+    @content;
+  }
+}
+
+// Миксин для установки границы с параметрами по умолчанию
+@mixin solidBorder($width: 1px, $color: #333) {
+  border: $width solid $color;
+}

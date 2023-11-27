@@ -1,0 +1,79 @@
+@import "../../../../sass/helper";
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 350px;
+  max-height: 450px;
+  overflow-y: auto;
+
+  @include tablet {
+    max-height: 100%;
+    height: 100%;
+  }
+}
+
+.post,
+.postActive {
+  background-color: $background-secondary-color;
+  transition: transform 0.3s ease-in-out;
+  border-radius: $border-radius;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  min-height: 80px;
+  width: 100%;
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+
+.postActive {
+  @include solidBorder(2px, $primary-color);
+}
+
+.name {
+  color: $white-color;
+  margin-bottom: 10px;
+  max-width: 130px;
+  overflow-x: auto;
+}
+
+.amountTasks {
+  color: $gray-color;
+}
+
+.priceWrapper {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.price,
+.priceDecorative {
+  font-size: 12px;
+  line-height: calc(16/12);
+}
+
+.price {
+  color: $secondary-color;
+  font-weight: 700;
+}
+
+.priceDecorative {
+  color: $gray-color;
+  font-weight: 500;
+}
+
+.dragging {
+  opacity: 0;
+}
+
+.hovered {
+  opacity: 0.3;
+}
+
+.dragAndDropBtn {
+  cursor: grab;
+}

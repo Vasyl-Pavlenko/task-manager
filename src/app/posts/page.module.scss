@@ -1,0 +1,32 @@
+@import "../../sass/helper";
+
+.postsBody {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+  overflow-y: auto;
+
+  @include tablet {
+    flex-direction: row;
+    align-items: center;
+    overflow: hidden;
+  }
+}
+
+.categoryWrapper {
+  flex: 1;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  
+  @include tablet {
+    padding-bottom: 20px;
+  }
+}

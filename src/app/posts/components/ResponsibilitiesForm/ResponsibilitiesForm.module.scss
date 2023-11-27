@@ -1,0 +1,98 @@
+@import "../../../../sass/helper";
+
+.form {
+  min-height: 350px;
+  height: calc(100% - 45px);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  @include tablet {
+    justify-content: space-between;
+  }
+}
+
+.responsibilitiesContent {
+  height: 100%;
+  background-color: $background-color;
+  padding: 12px 16px;
+  border-bottom-right-radius: $border-radius;
+  border-bottom-left-radius: $border-radius;
+}
+
+.submitBtn {
+  flex-basis: 87%;
+  background-color: $primary-color;
+  text-align: center;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  border-radius: $border-radius;
+  color: $white-color;
+  @include solidBorder(2px, rgba(245, 245, 245, 0.16));
+  transition: background-color 300ms ease;
+  box-shadow: 0px 4px 40px 0px rgba(104, 102, 234, 0.24);
+
+  &:hover {
+    background-color: $primary-color-hover;
+  }
+}
+
+.removeBtn {
+  flex: 1;
+  min-height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include solidBorder(2px, $primary-color);
+  height: 100%;
+  border-radius: $border-radius;
+  transition: all 300ms ease;
+
+  &>svg {
+    transition: all 300ms ease;
+  }
+
+  &:hover {
+    background-color: $primary-color;
+
+    &>svg {
+      fill: $background-color;
+    }
+  }
+}
+
+.responsibilitiesContent {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  height: 100%;
+
+  @include tablet {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.checkboxGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  @include tablet {
+    flex-basis: calc(50% - 20px);
+  }
+}
+
+.groupTitle {
+  color: $gray-color;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: calc(18/12);
+}
+
+.btnsWrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}

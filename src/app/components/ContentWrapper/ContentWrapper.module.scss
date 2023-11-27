@@ -1,0 +1,8 @@
+@import "../../../sass/helper";
+
+.content {
+  width: 100%;
+  height: 100%;
+  border-radius: $border-radius;
+  @include solidBorder(2px, $border-color);
+}

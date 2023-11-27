@@ -1,0 +1,46 @@
+@import "../../../../sass/helper";
+
+.form,
+.formActive {
+  position: absolute;
+  left: 0;
+  background-color: #fff;
+  padding: 10px;
+  transition: all 300ms ease;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  border-radius: $border-radius;
+}
+
+.form {
+  left: -100%;
+
+  @include tablet {
+    left: 0;
+    bottom: -100%;
+  }
+}
+
+.formActive {
+  bottom: 70px;
+
+  @include tablet {
+    bottom: 90px;
+  }
+}
+
+.submitBtn {
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: $primary-color;
+  border-radius: $border-radius;
+  color: $white-color;
+  transition: all 300ms ease;
+
+  &:hover {
+    background-color: $primary-color-hover;
+  }
+}

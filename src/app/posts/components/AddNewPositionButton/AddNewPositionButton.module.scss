@@ -1,0 +1,17 @@
+@import "../../../../sass/helper";
+
+.addNewPosition {
+  width: 100%;
+  background-color: $primary-color;
+  text-align: center;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  border-radius: $border-radius;
+  color: $white-color;
+  @include solidBorder(2px, rgba(245, 245, 245, 0.16));
+  transition: background-color 300ms ease;
+
+  &:hover {
+    background-color: $primary-color-hover;
+  }
+}

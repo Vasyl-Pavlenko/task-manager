@@ -1,0 +1,23 @@
+@import "../../../../sass/helper";
+
+.responsibilitiesBody {
+  @include tablet {
+    height: calc(100% - 135px);
+  }
+}
+
+.responsibilitiesHeder {
+  background-color: $background-color;
+  border-top-right-radius: $border-radius;
+  border-top-left-radius: $border-radius;
+  padding: 11px 16px;
+  box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.24);
+  position: relative;
+}
+
+.title {
+  color: $gray-color;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: calc(20/14);
+}
